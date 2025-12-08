@@ -6,9 +6,10 @@
 /* CSS VARIABLES (Color Palette) */
 :root {
     --bg-color: #0f172a;       /* Dark Navy Background (Primary) */
+    --bg-color2: #253047;
     --text-color: #f1f5f9;     /* Off-White Text (Secondary) */
     --accent-color: #38bdf8;    /* Electric Blue Accent */
-    --accent-color2: #b1d1f6;  
+    --accent-color2: #58c6ff;  
     --card-bg: #1e293b;        /* Slightly lighter card background */
     --font-header: 'Roboto Mono', monospace; 
     --font-body: 'Open Sans', sans-serif;    
@@ -25,7 +26,6 @@ body {
     color: var(--text-color);
     font-family: var(--font-body);
     line-height: 1.6;
-    margin: 0 4em; 
 }
 
 h1, h2, h3, h4 {
@@ -63,6 +63,7 @@ footer {
     background-color: transparent;
     border-bottom: 2px solid var(--accent-color);
     flex-wrap: wrap; 
+    margin: 0 4em;
 }
 
 .logo {
@@ -137,13 +138,7 @@ footer {
 /* 3. HOME & HUB LAYOUTS (Restored Flexbox Layout)           */
 /* ========================================================= */
 
-.index-content {
-    padding: 2rem;
-    max-width: 1100px;
-    margin: auto;
-}
-
-img{
+.aboutme-img{
     width:300px;
     height: auto;
     margin:0 2em;
@@ -152,18 +147,16 @@ img{
 /* HERO SECTION (index.html) */
 
 .hero {
-    padding: 4rem 1rem;
+    padding: 5rem 1rem;
     max-width: 1000px;
     margin: 0 auto;
 }
-
-
 
 /* FLEX CONTAINER FOR HERO CONTENT AND IMAGE */
 .hero-flex-container {
     display: flex;
     align-items: center; /* Vertically align items in the middle */
-    gap: 40px;
+    gap: 4em;
     text-align: left;
 }
 
@@ -225,24 +218,34 @@ img{
 }
 
 /* ABOUT ME SECTION (aboutme.html) */
+.aboutme section{
+    max-width: 1100px;
+    margin: auto;
+}
 
+/* Introduction (aboutme.html) */
 .aboutme-introduction {
+    padding: 8.5em 0;
     display: flex;
     align-items: center;
-    gap: 40px;
     text-align: left;
-    
+    gap: 2rem;
 }
 
 .introduction-text{
     margin: 0 2em;
 }
 
-.aboutme-characteristics {
+/* Characteristics (aboutme.html) */
+.aboutme-characteristics{
+    background-color: var(--bg-color2);
+    padding: 4em 0;
+}
+.characteristics-container {
     display: flex;
-    margin: 2em auto;
+    margin: 4em auto;
     align-items: center;
-    gap: 40px;
+    gap: 40px; 
 }
 
 .characteristics-text{
@@ -282,9 +285,36 @@ img{
     font-size: 0.95rem;
 }
 
+/* Interests (aboutme.html) */
+
+.aboutme-interests{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+.interests-text h2{
+    font-size: 2.5em;
+    text-align: left;
+}
+
+.interests-button{
+    margin-right: 2em;
+}
+
 /* INTERESTS SECTION (interest.html) */
 
+.interests-intro{
+    text-align: center;
+}
+
+.interests-intro h2{
+    text-align: center;
+    font-size: 2.5em;
+}
+
 .grid-gallery {
+    margin-top: 2em;
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 2rem;
