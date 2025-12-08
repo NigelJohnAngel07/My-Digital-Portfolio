@@ -1,21 +1,19 @@
 /* ========================================================= */
 /* 1. TYPOGRAPHY & VARIABLES (Requirements B.2 & B.3)        */
 /* ========================================================= */
-
-/* IMPORT GOOGLE FONTS (Roboto Mono for headers, Open Sans for body) */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
 /* CSS VARIABLES (Color Palette) */
 :root {
     --bg-color: #0f172a;       /* Dark Navy Background (Primary) */
     --text-color: #f1f5f9;     /* Off-White Text (Secondary) */
-    --accent-color: #38bdf8;   /* Electric Blue Accent */
+    --accent-color: #38bdf8;    /* Electric Blue Accent */
+    --accent-color2: #b1d1f6;  
     --card-bg: #1e293b;        /* Slightly lighter card background */
     --font-header: 'Roboto Mono', monospace; 
     --font-body: 'Open Sans', sans-serif;    
 }
 
-/* GLOBAL RESET & BASE STYLES */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -139,12 +137,27 @@ footer {
 /* 3. HOME & HUB LAYOUTS (Restored Flexbox Layout)           */
 /* ========================================================= */
 
+.index-content {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+img{
+    width:300px;
+    height: auto;
+    margin:0 2em;
+}
+
 /* HERO SECTION (index.html) */
+
 .hero {
     padding: 4rem 1rem;
     max-width: 1000px;
     margin: 0 auto;
 }
+
+
 
 /* FLEX CONTAINER FOR HERO CONTENT AND IMAGE */
 .hero-flex-container {
@@ -193,7 +206,84 @@ footer {
     background-color: #6ed1ff; 
 }
 
-/* GRID LAYOUT (interests.html - Requirement B.1) */
+.social-links {
+    /* Desktop: Aligned left */
+    display: flex;
+    margin: 1rem 0 0 0;
+    gap: 2rem; /* Spacing between icons */
+}
+
+.social-links a {
+    color: var(--text-color); /* Default icon color (white/off-white) */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color); /* Highlight color on hover */
+    transform: scale(1.15); /* Slightly enlarge on hover */
+}
+
+/* ABOUT ME SECTION (aboutme.html) */
+
+.aboutme-introduction {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    
+}
+
+.introduction-text{
+    margin: 0 2em;
+}
+
+.aboutme-characteristics {
+    display: flex;
+    margin: 2em auto;
+    align-items: center;
+    gap: 40px;
+}
+
+.characteristics-text{
+    text-align: center;
+}
+
+.characteristics-text h2{
+    font-size: 2.5em;
+}
+.characteristics-text h3{
+    color: var(--accent-color2);
+    font-size: 1.5em;
+}
+
+.trait-list {
+    gap: 30px;
+    margin: 0 2em
+}
+
+.trait-item {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 3px solid var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.trait-item dt {
+    font-family: var(--font-header);
+    color: var(--accent-color);
+    font-size: 1.15rem;
+    margin-bottom: 5px;
+}
+
+.trait-item dd {
+    margin-left: 0;
+    font-size: 0.95rem;
+}
+
+/* INTERESTS SECTION (interest.html) */
+
 .grid-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -228,87 +318,6 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* ========================================================= */
-/* 3.5 SOCIAL ICONS (Placed below CTA in hero-content)       */
-/* ========================================================= */
-
-.social-links {
-    /* Desktop: Aligned left */
-    display: flex;
-    margin: 1rem 0 0 0;
-    gap: 2rem; /* Spacing between icons */
-}
-
-.social-links a {
-    color: var(--text-color); /* Default icon color (white/off-white) */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s, transform 0.3s;
-}
-
-.social-links a:hover {
-    color: var(--accent-color); /* Highlight color on hover */
-    transform: scale(1.15); /* Slightly enlarge on hover */
-}
-
-/* ========================================================= */
-/* NEW SECTION STYLING (index.html Personal Profile)         */
-/* ========================================================= */
-
-.index-content {
-    padding: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.personal-profile h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.personal-profile p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 2rem;
-}
-
-.trait-list {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 30px;
-    margin-bottom: 2rem;
-}
-
-.trait-item {
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 8px;
-    border-top: 3px solid var(--accent-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.trait-item dt {
-    font-family: var(--font-header);
-    color: var(--accent-color);
-    font-size: 1.15rem;
-    margin-bottom: 5px;
-}
-
-.trait-item dd {
-    margin-left: 0;
-    font-size: 0.95rem;
-}
-
-.section-link {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1.1rem;
-}
-
-.section-link a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: bold;
-}
 
 /* ========================================================= */
 /* 5. RESPONSIVENESS (MEDIA QUERY - Requirement B.4)         */
