@@ -12,7 +12,7 @@
     --accent-color2: #58c6ff;  
     --card-bg: #1e293b;        /* Slightly lighter card background */
     --font-header: 'Roboto Mono', monospace; 
-    --font-body: 'Open Sans', sans-serif;    
+    --font-body: 'Open Sans', sans-serif;   
 }
 
 * {
@@ -114,35 +114,43 @@ footer {
 
 .dropdown-content{
     margin-top: 3px;
-    display: none;
     position: absolute;
     background-color: var(--card-bg);
     min-width: 120px;
     border: 1px solid var(--accent-color);
-    border-top: 0;
+    border-top: 0;  
     border-radius: 0.5em;
     padding: 12px 16px;
 }
 
 .dropdown-content div{
     padding:0.2rem
+}   
+
+@media screen and (max-width: 600px) {
+    
+    /* Nav: Stack vertically */
+    .navbar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    /* 💥 Logo Centering: Overrides desktop margin and centers logo 💥 */
+    .logo {
+        margin-right: 0;
+        margin: 0 auto 0.5rem auto; 
+    }
+    
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap; 
+        gap: 15px;
+    }
 }
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
 
 /* ========================================================= */
 /* 3. HOME & HUB LAYOUTS (Restored Flexbox Layout)           */
 /* ========================================================= */
-
-.aboutme-img{
-    width:300px;
-    height: auto;
-    margin:0 2em;
-}
 
 /* HERO SECTION (index.html) */
 
@@ -156,7 +164,7 @@ footer {
 .hero-flex-container {
     display: flex;
     align-items: center; /* Vertically align items in the middle */
-    gap: 4em;
+    gap: 2em;
     text-align: left;
 }
 
@@ -216,14 +224,45 @@ footer {
     color: var(--accent-color); /* Highlight color on hover */
     transform: scale(1.15); /* Slightly enlarge on hover */
 }
+@media screen and (max-width: 600px) {
 
+
+    /* HERO: Stack image above text (Restored standard mobile stacking) */
+    .hero-flex-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-image-container {
+        order: -1; /* Puts image at the top of the stack */
+        margin-bottom: 2rem;
+    }
+    
+    .hero h1 { 
+        font-size: 2rem; 
+    }
+    .social-links {
+        justify-content: center;
+        margin: 1rem auto 0 auto; 
+    }
+}
 /* ABOUT ME SECTION (aboutme.html) */
-.aboutme section{
+.section-background{
+    background-color: var(--bg-color2);
+    padding: 4em 0;
+}
+
+.aboutme section > div{
     max-width: 1100px;
     margin: auto;
 }
 
 /* Introduction (aboutme.html) */
+.aboutme-img{
+    width:300px;
+    height: auto;
+    margin: 0 2em;
+}
 .aboutme-introduction {
     padding: 8.5em 0;
     display: flex;
@@ -232,15 +271,7 @@ footer {
     gap: 2rem;
 }
 
-.introduction-text{
-    margin: 0 2em;
-}
-
 /* Characteristics (aboutme.html) */
-.aboutme-characteristics{
-    background-color: var(--bg-color2);
-    padding: 4em 0;
-}
 .characteristics-container {
     display: flex;
     margin: 4em auto;
@@ -284,22 +315,62 @@ footer {
     margin-left: 0;
     font-size: 0.95rem;
 }
+@media screen and (max-width: 768px) {
+    /* Stack the main 'About Me' introduction content vertically */
+    .aboutme-introduction {
+        flex-direction: column;
+        text-align: center;
+        padding: 4em 0; /* Reduced vertical padding */
+    }
+
+    /* Center the image and add vertical spacing */
+    .aboutme-introduction > div:first-child {
+        margin-bottom: 2em;
+    }
+
+    .aboutme-img{
+        margin: 0; /* Clear previous margins */
+    }
+    
+    .introduction-text {
+        padding: 0 1em; /* Add horizontal padding to text */
+    }
+
+    /* Stack the Characteristics content vertically */
+    .characteristics-container {
+        flex-direction: column;
+        gap: 2em;
+        text-align: center;
+    }
+
+    /* Reset the characteristics text alignment to be centered on mobile */
+    .characteristics-text {
+        min-width: unset;
+    }
+
+    .trait-list {
+        margin: 0 2em; /* Reduced margin */
+    }
+}
+
+/* Mobile Devices (Max width 600px) */
+@media screen and (max-width: 600px) {
+    .aboutme-img{
+        width: 100%; /* Make the image fill the width */
+        max-width: 250px; /* But keep a reasonable max size */
+    }
+}
 
 /* Interests (aboutme.html) */
-
 .aboutme-interests{
     display: flex;
     justify-content: space-between;
-    padding: 2em 0;
+    padding: 2em;
 }
 
 .interests-text h2{
     font-size: 2.5em;
     text-align: left;
-}
-
-.interests-button{
-    margin-right: 2em;
 }
 
 /* INTERESTS SECTION (interest.html) */
@@ -348,66 +419,96 @@ footer {
     margin-bottom: 1rem;
 }
 
-
-/* ========================================================= */
-/* 5. RESPONSIVENESS (MEDIA QUERY - Requirement B.4)         */
-/* ========================================================= */
-
 @media screen and (max-width: 600px) {
-    
-    /* Nav: Stack vertically */
-    .navbar {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    /* 💥 Logo Centering: Overrides desktop margin and centers logo 💥 */
-    .logo {
-        margin-right: 0;
-        margin: 0 auto 0.5rem auto; 
-    }
-    
-    .nav-links {
-        justify-content: center;
-        flex-wrap: wrap; 
-        gap: 15px;
-    }
 
-    /* 💥 Social Icon Centering: Centers the icons within the hero content 💥 */
-    .social-links {
-        justify-content: center;
-        margin: 1rem auto 0 auto; 
-    }
-
-    /* HERO: Stack image above text (Restored standard mobile stacking) */
-    .hero-flex-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .hero-image-container {
-        order: -1; /* Puts image at the top of the stack */
-        margin-bottom: 2rem;
-    }
-
-    /* Grid: Change to Single Column for Hub Page */
     .grid-gallery {
         grid-template-columns: 1fr;
     }
+}
 
-    /* Flex: Stack Vertically for Detail Pages */
-    .flex-layout {
-        flex-direction: column;
-    }
-    .image-section {
-        order: -1; 
-        margin-bottom: 1.5rem;
-    }
+/* CONTACTS SECTION (contacts.html) */
+.contact-grid {
+    display: grid;
+    /* Create two columns: Form takes 2/3, Info takes 1/3 */
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
 
-    /* Adjust Fonts */
-    .hero h1 { font-size: 2rem; }
+.contact-form-card, .direct-contact-card {
+    /* Inherits card styles */
+    height: auto;
+}
 
-    .trait-list {
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #334155;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-info-list {
+    margin-top: 1rem;
+}
+
+.contact-info-list dt {
+    color: var(--accent-color);
+    font-family: var(--font-header);
+    margin-top: 1rem;
+    font-size: 1.05rem;
+}
+
+.contact-info-list dd a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-info-list dd a:hover {
+    color: var(--accent-color);
+}
+
+.social-links-contact {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-links-contact a {
+    color: var(--text-color);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links-contact a:hover {
+    color: var(--accent-color);
+    transform: scale(1.15);
+}
+
+/* Responsive adjustment for Contacts Page */
+@media screen and (max-width: 800px) {
+    /* Switch to single column earlier for the two contact cards */
+    .contact-grid {
         grid-template-columns: 1fr;
     }
 }

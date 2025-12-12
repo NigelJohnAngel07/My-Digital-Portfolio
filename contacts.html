@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigel | Contacts</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">NIGEL</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a> </li>
+                <details class="dropdown">
+                    <summary>
+                        <a href="interests.html">My Interests</a>
+                    </summary>
+                    <div class="dropdown-content">
+                        <div><a href="coding.html">Coding</a></div>
+                        <div><a href="music.html">Music</a></div>
+                        <div><a href="dance.html">Dancing</a></div>
+                    </div>
+                </details>
+                <li><a href="contacts.html"class="active">Contacts</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Contact Me</h1>
+        <p>I'd love to hear from you! Feel free to reach out via email or connect with me on social media.</p>
+
+        <section class="contact-grid">
+            
+            <div class="card contact-form-card">
+                <h3>Send Me a Message</h3>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="card direct-contact-card">
+                <h3>Direct Contact & Connect</h3>
+
+                <dl class="contact-info-list">
+                    <dt><i class="fas fa-envelope"></i> Email:</dt>
+                    <dd><a href="mailto:nigel.developer@email.com">nigel.developer@email.com</a></dd>
+
+                    <dt><i class="fas fa-map-marker-alt"></i> Location:</dt>
+                    <dd>Davao City, Philippines</dd>
+                </dl>
+                
+                <h4 style="margin-top: 2rem;">My Channels</h4>
+                <div class="social-links-contact">
+                    <a href="https://www.linkedin.com/in/nigel-john-angel-4a6186398/" target="_blank" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/NigelJohnAngel07" target="_blank" aria-label="GitHub Profile">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.facebook.com/nigeljohn.angel" target="_blank" aria-label="Facebook Profile">
+                        <i class="fab fa-facebook-f fa-2x"></i>
+                    </a>
+                    <a href="mailto:nigeljohnangel07@gmail.com" aria-label="Email Me">
+                        <i class="fas fa-envelope fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alex's Portfolio. Built with HTML & CSS.</p>
+    </footer>
+</body>
+</html>
