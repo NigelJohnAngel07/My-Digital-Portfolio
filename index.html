@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigel | Home</title>
-    <!-- Icon missing-->
+    <!--Need Icon-->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -15,21 +15,23 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="aboutme.html">About Me</a> </li>
-                <li class="dropdown">
-                    <a href="interests.html">My Interests</a>
+                <details class="dropdown">
+                    <summary>
+                        <a href="interests.html">My Interests</a>
+                    </summary>
                     <div class="dropdown-content">
                         <div><a href="coding.html">Coding</a></div>
                         <div><a href="music.html">Music</a></div>
                         <div><a href="dance.html">Dancing</a></div>
                     </div>
-                </li>
+                </details>
                 <li><a href="contacts.html">Contacts</a> </li>
             </ul>
         </nav>
     </header>
 
     <main class="hero">
-        <div class="hero-flex-container"> 
+        <section class="hero-flex-container"> 
             
             <div class="hero-image-container">
                 <img src="images/NIGEL-Grad_Pic.jpg" alt="A profile photo of Nigel, the creative developer." class="profile-image">
@@ -58,7 +60,7 @@
                 <a href="aboutme.html" class="cta-button">Learn More About Me</a>
             </div>
             
-        </div>
+        </section>
     </main>
 
     <footer>
