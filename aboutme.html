@@ -13,72 +13,109 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutme.html"class="active">About Me</a> </li>
-                <details class="dropdown">
-                    <summary>
-                        <a href="interests.html">My Interests</a>
-                    </summary>
-                    <div class="dropdown-content">
-                        <div><a href="coding.html">Coding</a></div>
-                        <div><a href="music.html">Music</a></div>
-                        <div><a href="dance.html">Dancing</a></div>
-                    </div>
-                </details>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="contacts.html">Contacts</a> </li>
             </ul>
         </nav>
     </header>
     <main class="aboutme">
-        <section>
+        <section class="about-me-hero">
+            <div class="hero-content-centered"> 
+                
+                <img src="images/nigel.jpg" alt="Nigel portrait" class="hero-image-large">
+                
+                <h1>Hi, I'm Nigel John Angel</h1>
+                <p>A Passionate Developer / Architect / Creator</p>
+            </div>
+        </section>
+        <section class="section-background">
             <div class="aboutme-introduction">
-                <div>
-                    <img src="images/NIGEL-Grad_Pic.jpg" alt="image" class="aboutme-img">
+                <div class="aboutme-img">
+                    <img src="images/nigel2.jpg" alt="My portrait" />
                 </div>
                 <div class="introduction-text">
                     <h2>✨ Who I Am Beyond the Code</h2>
-                    <p>I believe my hobbies define my approach to life and work. My characteristics are shaped by the discipline of dance, the 
-                        creativity of music, and the logic of programming.
+                    <p>The discipline of dance, the creativity of music, and the logic of programming are the core hobbies that shape my approach to both life and work.
                     </p>
                 </div>
             </div>
         </section>
-        <section class="section-background">
-            <div class="characteristics-container">
+        <section>
+            <div class="characteristics-container"> 
                 <div class="characteristics-text">
-                    <h2>Characteristics</h2>   
+                    <h2>Characteristics</h2> 
                     <h3>Triple B (BBB)</h3> 
                 </div>
-                <div class="traits-container">
-                    <dl class="trait-list">
-                        <div class="trait-item">
-                            <dt>💡 Brilliant</dt>
-                            <dd>My <strong>brilliance</strong> lies in my capacity to rapidly break down complex challenges and organize them into precise, actionable steps that lead directly to successful execution.</dd>
-                        </div>
-                        <div class="trait-item">
-                            <dt>🔥 Bold</dt>
-                            <dd>I embrace challenges with a <strong>boldness</strong> that allows me to step forward and make decisions others shy away from.</dd>
-                        </div>
-                        <div class="trait-item">
-                            <dt>🤍 Benevolent</dt>
-                            <dd>I actively seek opportunities to practice <strong>benevolence</strong>, understanding that true compassion requires consistent effort and tangible contributions to others' well-being.</dd>
-                        </div>
-                    </dl>
+                
+                <div class="trait-list-wrapper">
+                    <ul class="trait-list">
+                        <li class="trait-item">
+                            <h4 class="trait-title">💡 Brilliant</h4>
+                            <p>My <strong>brilliance</strong> lies in my capacity to rapidly break down complex challenges and organize them into precise, actionable steps that lead directly to successful execution.</p>
+                        </li>
+                        <li class="trait-item">
+                            <h4 class="trait-title">🔥 Bold</h4>
+                            <p>I embrace challenges with a <strong>boldness</strong> that allows me to step forward and make decisions others shy away from.</p>
+                        </li>
+                        <li class="trait-item">
+                            <h4 class="trait-title">🤍 Benevolent</h4>
+                            <p>I actively seek opportunities to practice <strong>benevolence</strong>, understanding that true compassion requires consistent effort and tangible contributions to others' well-being.</p>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-        </section>       
-        <section>
-            <div class="aboutme-interests">
-                <div class="interests-text">
+            </div>
+        </section>
+
+        <section class="section-background">
+            <div class="container">
+                <div class="interests-intro">
                     <h2>Interests</h2>
-                    <p>For a deep dive into my hobbies and interests in life, click the button</p>
+                    <p>My life is a balance between the structure of code and the freedom of art.</p>
                 </div>
-                <div class="interests-button">
-                    <a href="interests.html" class="cta-button">My Interests</a>
+                <div class="grid-gallery">
+                    
+                    <div class="card-wrapper">
+                        <article class="card">
+                            <img src="images/coding.jpg" alt="Computer screen with code">
+                            <h3>Coding</h3>
+                            <p>I am passionate about technology and the process of creating functional software</p>
+                        </article>
+                    </div>
+
+                    <div class="card-wrapper">
+                        <article class="card">
+                            <img src="images/guitar.jpg" alt="Electric Guitar">
+                            <h3>Music</h3>
+                            <p>I find the most enjoyment in playing metal and rock on the guitar</p>
+                        </article>
+                    </div>
+
+                    <div class="card-wrapper">
+                        <article class="card">
+                            <img src="images/dance.jpg" alt="Group Picture before performance">
+                            <h3>Dancing</h3>
+                            <p>I am passionate about the energy and movement found in Afro, Dancehall, and the distinctive groove of Locking</p>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="aboutme-projects">
+                <div class="aboutme-projects-text">
+                    <h2>Projects</h2>
+                    <p>Click the button to examine a project with my involvement</p>
+                </div>
+                <div class="aboutme-projects-button">
+                    <a href="projects.html" class="cta-button"> Projects</a>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 Nigel's Portfolio. Built with HTML & CSS.</p>
+        <p>&copy; 2025 Nigel's Portfolio. All rights reserved. </p>
     </footer>
 </body>
 </html>
