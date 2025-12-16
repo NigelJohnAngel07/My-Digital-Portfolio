@@ -1,3 +1,14 @@
+/*
+My Reflection
+
+I chose to build this portfolio website all by myself to show off who I am, what I can do, and the projects I have completed. 
+This website is important because I plan to use it to present myself when I look for a job. 
+Working alone meant the project took more time, but it gave me complete control over how everything looks and works. 
+The hardest part was making the website look good on all devices. 
+To fix this, I had to use a media query to change the layout when the screen is small, like on a phone.
+ Making it responsive was a big challenge, but it ensures users can view my work easily on any device.
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
